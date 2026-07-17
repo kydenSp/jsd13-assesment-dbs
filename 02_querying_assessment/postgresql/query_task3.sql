@@ -16,7 +16,7 @@
 -- Source : Table 'orders'&'staff'
 -- Criteria : only cashier staff and list from the most to the least.
 -- SQL Concept : 
---  1.Select row of first_name , last_name and role.
+--  1.Select column of first_name , last_name and role.
 --  2.COUNT all the order tht staff handle.
 --  3.FROM table staff to check the name and id.
 --  4.JOIN join staff id on staff and order table.

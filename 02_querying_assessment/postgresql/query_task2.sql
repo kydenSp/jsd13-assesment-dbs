@@ -14,7 +14,7 @@
 -- Source : table "staff"
 -- Criteria : Only staff work in cook role.
 -- SQL Concept : 
---  1. Select the row of first_name , last_name
+--  1. Select the column of first_name , last_name
 --  2. From 'staff'
 --  3. Where only cook role.
 -- ---------------------------------------------------------------
