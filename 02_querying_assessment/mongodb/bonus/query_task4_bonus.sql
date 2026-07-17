@@ -10,6 +10,13 @@
 
 -- ---------------------------------------------------------------
 -- Your thinking process (required)
+-- Target : single value of sum of total_price named total_revenue.
+-- Source : Table orders
+-- Criteria : all recorded orders
+-- SQL Concept :
+-- use aggregate function for SUM
+-- AS total_revenue
+--FROM table orders
 -- ---------------------------------------------------------------
 -- Before writing your query, explain in your own words how you
 -- interpreted the task, what data you need, which table(s) are
@@ -18,3 +25,5 @@
 --
 -- Your thinking:
 --
+SELECT SUM(orders.total_price) AS total_revenue
+FROM orders

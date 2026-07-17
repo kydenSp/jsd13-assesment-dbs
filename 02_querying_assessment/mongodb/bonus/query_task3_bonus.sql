@@ -10,6 +10,13 @@
 
 -- ---------------------------------------------------------------
 -- Your thinking process (required)
+-- Target : list of ingredient name.
+-- Source : Table ingredients
+-- Criteria : stock_level is greater than or equal to 100.
+-- SQL Concept : 
+--SELECT column ingredients.name
+--FROM table ingredients
+--WHERE filter by ingredients.stock_level >= for greater than or equal to 100
 -- ---------------------------------------------------------------
 -- Before writing your query, explain in your own words how you
 -- interpreted the task, what data you need, which table(s) are
@@ -18,3 +25,6 @@
 --
 -- Your thinking:
 --
+SELECT ingredients.NAME
+FROM ingredients
+WHERE ingredients.stock_level >= 100

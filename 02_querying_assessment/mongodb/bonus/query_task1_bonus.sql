@@ -10,6 +10,13 @@
 
 -- ---------------------------------------------------------------
 -- Your thinking process (required)
+-- Target : list of menu item menu and price.
+-- Source : table 'menu_items'.
+-- Criteria : menus's price less than $10.00.
+-- SQL Concept :
+-- SELECT column name and price.
+-- FROM table menu_items.
+-- WHERE filter by column menu_items.price < 10.00 
 -- ---------------------------------------------------------------
 -- Before writing your query, explain in your own words how you
 -- interpreted the task, what data you need, which table(s) are
@@ -18,3 +25,6 @@
 --
 -- Your thinking:
 --
+SELECT menuitems.name, menuitems.price
+FROM menuitems
+WHERE menuitems.price < 10.00

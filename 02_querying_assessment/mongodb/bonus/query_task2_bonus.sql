@@ -11,6 +11,14 @@
 
 -- ---------------------------------------------------------------
 -- Your thinking process (required)
+-- Target : list of order_date and total_price.
+-- Source : Table orders and Table staff
+-- Criteria : only orders handled by staff first_name = 'Jane' and last_name = 'Doe'.
+-- SQL Concept :
+--SELECT column orders.order_date and orders.total_price
+--FROM table orders
+--JOIN table staff on staff_id
+--WHERE filter by staff.first_name = 'Jane' AND staff.last_name = 'Doe'
 -- ---------------------------------------------------------------
 -- Before writing your query, explain in your own words how you
 -- interpreted the task, what data you need, which table(s) are
@@ -19,3 +27,7 @@
 --
 -- Your thinking:
 --
+SELECT orders.order_date,orders.total_price
+FROM orders
+JOIN staff on staff.staff_id = orders.staff_id
+WHERE staff.first_name = 'Jane' AND staff.last_name = 'Doe'
