@@ -12,6 +12,10 @@
 
 // ---------------------------------------------------------------
 // Your thinking process (required)
+//Target : 
+// Source : 
+// Criteria : 
+// mongoDB Concept :
 // ---------------------------------------------------------------
 // Before writing your query, explain in your own words how you
 // interpreted the task, what data you need, which collection(s)

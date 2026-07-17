@@ -10,6 +10,13 @@
 
 -- ---------------------------------------------------------------
 -- Your thinking process (required)
+-- Target : list full name of every staff member in cook prosition.
+-- Source : table "staff"
+-- Criteria : Only staff work in cook role.
+-- SQL Concept : 
+--  1. Select the row of first_name , last_name
+--  2. From 'staff'
+--  3. Where only cook role.
 -- ---------------------------------------------------------------
 -- Before writing your query, explain in your own words how you
 -- interpreted the task, what data you need, which table(s) are
@@ -18,3 +25,6 @@
 --
 -- Your thinking:
 --
+SELECT first_name,last_name
+FROM staff
+WHERE role = 'Cook'

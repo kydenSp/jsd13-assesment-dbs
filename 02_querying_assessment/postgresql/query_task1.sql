@@ -10,6 +10,13 @@
 
 -- ---------------------------------------------------------------
 -- Your thinking process (required)
+-- Target :  list od side dishes along with  price.
+-- Source : table = "Menuitems"
+-- Criteria : only Side dishes and price
+-- SQL Concept : 
+-- 1. Select the column of name and price
+-- 2. From table MenuItems
+-- 3. Where only category 'side'
 -- ---------------------------------------------------------------
 -- Before writing your query, explain in your own words how you
 -- interpreted the task, what data you need, which table(s) are
@@ -18,3 +25,6 @@
 --
 -- Your thinking:
 --
+SELECT name, price
+FROM menuitems
+WHERE category = 'Side'

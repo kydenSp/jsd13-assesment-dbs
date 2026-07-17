@@ -10,6 +10,14 @@
 
 -- ---------------------------------------------------------------
 -- Your thinking process (required)
+-- Target : list of ingredient from Freshest Farm Produce.
+-- Source : Table 'supplier'& 'ingredients'
+-- Criteria : all the ingrdient supply by Freshest Farm Produce.
+-- SQL Concept : 
+-- 1.SELECT column ingredients name
+-- 2.FROM ingredient table
+-- 3.JOIN join supplier & ingredient table in supplier_id column
+-- 4.WHERE filter only ingredients supply by 'Freshest Farm Produce'
 -- ---------------------------------------------------------------
 -- Before writing your query, explain in your own words how you
 -- interpreted the task, what data you need, which table(s) are
@@ -18,3 +26,7 @@
 --
 -- Your thinking:
 --
+SELECT ingredients.name
+FROM ingredients
+JOIN suppliers on suppliers.supplier_id = ingredients.supplier_id
+WHERE suppliers.name = 'Freshest Farm Produce'

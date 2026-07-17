@@ -12,6 +12,17 @@
 
 -- ---------------------------------------------------------------
 -- Your thinking process (required)
+-- Target : list the staff name and total order count.
+-- Source : Table 'orders'&'staff'
+-- Criteria : only cashier staff and list from the most to the least.
+-- SQL Concept : 
+--  1.Select row of first_name , last_name and role.
+--  2.COUNT all the order tht staff handle.
+--  3.FROM table staff to check the name and id.
+--  4.JOIN join staff id on staff and order table.
+--  5.WHERE only cashier role is need.
+--  6.GROUP BY group the name and ordercount together.
+--  7.ORDER BY from most to least.
 -- ---------------------------------------------------------------
 -- Before writing your query, explain in your own words how you
 -- interpreted the task, what data you need, which table(s) are
@@ -20,3 +31,12 @@
 --
 -- Your thinking:
 --
+
+SELECT staff.first_name,staff.last_name,
+COUNT(orders.staff_id) AS orderCount
+FROM staff
+JOIN orders on staff.staff_id = orders.staff_id
+WHERE role = 'Cashier'
+GROUP BY staff.first_name,staff.last_name
+ORDER BY orderCount DESC
+
