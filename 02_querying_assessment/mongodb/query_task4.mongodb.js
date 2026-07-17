@@ -12,10 +12,13 @@
 // ---------------------------------------------------------------
 // Your thinking process (required)
 
-// Target : 
-// Source : 
-// Criteria : 
+// Target : find total_revenue
+// Source : collection (orders)
+// Criteria : calculate total from all order and result in the field : total_revenue
 // mongoDB Concept :
+// 1. use aggregate to process data through pipeline stages.
+// 2. Use $group with _id: null to combine all documents into a single group.
+// 3. $sum total or all the order.   
 // ---------------------------------------------------------------
 // Before writing your query, explain in your own words how you
 // interpreted the task, what data you need, which collection(s)
@@ -24,3 +27,6 @@
 //
 // Your thinking:
 //
+use("chrome-burger-db");
+
+db.orders.aggregate([{$group:{_id:null,total_revenue:{$sum:'$total_price'}} }])

@@ -11,10 +11,14 @@
 // ---------------------------------------------------------------
 // Your thinking process (required)
 
-// Target : 
-// Source : 
-// Criteria : 
+// Target : list all the ingredient and stock level 100 or more
+// Source :  collection 'ingredients'
+// Criteria : only ingrendients's stock 100 or above.
 // mongoDB Concept :
+// 1.use getCollection to connect with ingredients.
+// 2.find ({}) to filter all the items, looking for stock equal or above 100
+// 3.the amount is decimal and amount must above or queal 100,
+// so I use decimal128 to clearify the amount same as the data and $gte for greater than or equal 100
 // ---------------------------------------------------------------
 // Before writing your query, explain in your own words how you
 // interpreted the task, what data you need, which collection(s)
@@ -23,3 +27,6 @@
 //
 // Your thinking:
 //
+use("chrome-burger-db"); 
+
+db.getCollection('ingredients').find({stock_level:{$gte:Decimal128('100.00')}})

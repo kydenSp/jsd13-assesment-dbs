@@ -16,7 +16,7 @@
 // Criteria : menus's price less than $10.00.
 // mongoDB Concept : 
 // 1.use getCollection to connect with menu_items.
-// 2.find ({}) to check all the items, looking for price under $10.00.
+// 2.find ({}) to filter all the items, looking for price under $10.00.
 // 3.the price is decimal and price must under $10.00,so I use decimal128 to clearify the price and $lt for less than 10.00.
 // ---------------------------------------------------------------
 // Before writing your query, explain in your own words how you
